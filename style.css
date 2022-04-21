@@ -27,4 +27,133 @@ html {
 
 body {
   font-family: "Red Hat Display", sans-serif;
+  background-color: var(--Pale-blue);
+  background-image: url(/images/pattern-background-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  color: var(--Desaturated-blue);
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: url(/images/pattern-background-mobile.svg);
+  }
+}
+
+.card {
+  max-width: var(--width);
+  background-color: white;
+  border-radius: 2rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.15);
+}
+
+/** this is the card image */
+
+.card .card__image img {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+/** this is the card content */
+
+.card__content {
+  max-width: 80%;
+  margin-inline: auto;
+}
+
+/*- this is the text of the content */
+
+.card__content .card__content--text {
+  margin-bottom: 2rem;
+}
+
+.card__content .card__content--text h3 {
+  font-size: 2.3rem;
+  font-weight: var(--font-weight-900);
+  margin-bottom: 2rem;
+  color: var(--Dark-blue);
+}
+
+.card__content .card__content--text p {
+  font-size: var(--Font-size-paragraph);
+}
+
+/*- this is the price of the content */
+
+.card__content--price {
+  display: grid;
+  grid-template-columns: min-content 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+
+  background-color: var(--Very-pale-blue);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+
+.card__content .card__content--price img {
+  width: 4rem;
+}
+
+.card__content .card__content--price .card__content--price--plan {
+  justify-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card__content .card__content--price .card__content--price--plan h4 {
+  font-size: 1.4rem;
+  color: var(--Dark-blue);
+  font-weight: var(--font-weight-900);
+}
+
+.card__content .card__content--price .card__content--price--plan p {
+  font-size: 1.3rem;
+}
+
+.card__content .card__content--price button {
+  background: none;
+  outline: none;
+  border: none;
+  text-decoration: underline;
+  color: var(--Bright-blue);
+  font-weight: var(--font-weight-900);
+  font-size: 1.2rem;
+  justify-self: flex-end;
+}
+
+/*- this is the buttons box */
+
+.card .card__content .card__content--buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.card .card__content .card__content--buttons .primary {
+  background-color: var(--Bright-blue);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(56, 41, 224, 0.3);
+}
+
+.card .card__content .card__content--buttons .cancel {
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--Desaturated-blue);
+  font-weight: var(--font-weight-900);
+  font-size: 1.1rem;
+  margin-bottom: 5rem;
 }
